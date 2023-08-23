@@ -5,7 +5,7 @@ using Game.LevelSystem.LevelEvents;
 using Game.SlingSystem.Base;
 using Game.SlingSystem.Managers;
 using Utils;
-using Zenject;
+using VContainer;
 
 namespace Game.LevelSystem.Managers
 {
@@ -17,7 +17,7 @@ namespace Game.LevelSystem.Managers
 
         
         [Inject]
-        private void OnInstaller(SlingManager slingManager)
+        private void Execute(SlingManager slingManager)
         {
             _slingManager = slingManager;
             

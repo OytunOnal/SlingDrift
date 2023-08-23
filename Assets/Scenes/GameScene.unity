@@ -1339,6 +1339,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _carLeftAnchor: {fileID: 1818377445}
   _carRightAnchor: {fileID: 1205297515}
+  _playerView: {fileID: 1393787232}
+  _optLevelGenerator: {fileID: 510173065}
 --- !u!4 &727555823
 Transform:
   m_ObjectHideFlags: 0
@@ -2496,7 +2498,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1440234844}
-  - component: {fileID: 1440234846}
   - component: {fileID: 1440234845}
   m_Layer: 0
   m_Name: GameInstaller
@@ -2529,45 +2530,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1440234843}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed91ada2cc72a574b9ff79a2d7ddf983, type: 3}
+  m_Script: {fileID: 11500000, guid: ccc69b0ab3595e24297b2e18cb0f9725, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentReference:
+    TypeName: 
+  autoRun: 1
+  autoInjectGameObjects:
+  - {fileID: 702316574}
+  - {fileID: 510173063}
   _poolManager: {fileID: 2108479867}
   _levelGenerator: {fileID: 510173065}
   _carBase: {fileID: 727555822}
   _playerView: {fileID: 1393787232}
---- !u!114 &1440234846
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1440234843}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89715ad69b973a14899afa2c6730b30b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _scriptableObjectInstallers: []
-  _monoInstallers:
-  - {fileID: 1440234845}
-  _installerPrefabs: []
-  _autoRun: 1
-  OnPreInstall:
-    m_PersistentCalls:
-      m_Calls: []
-  OnPostInstall:
-    m_PersistentCalls:
-      m_Calls: []
-  OnPreResolve:
-    m_PersistentCalls:
-      m_Calls: []
-  OnPostResolve:
-    m_PersistentCalls:
-      m_Calls: []
-  _parentNewObjectsUnderSceneContext: 0
-  _contractNames: []
-  _parentContractNames: []
 --- !u!1 &1452433276
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,7 +6,7 @@ using Game.LevelSystem.LevelEvents;
 using Game.SlingSystem.Managers;
 using Game.View;
 using UnityEngine;
-using Zenject;
+using VContainer;
 
 namespace Game.CarSystem.Base
 {
@@ -14,7 +14,9 @@ namespace Game.CarSystem.Base
     {
         [SerializeField] private GameObject _carLeftAnchor;
         [SerializeField] private GameObject _carRightAnchor;
-
+        
+        
+        
         #region Controllers
 
         private CarMovementController _carMovementController;
@@ -23,17 +25,16 @@ namespace Game.CarSystem.Base
 
         #endregion
 
-        private PlayerView _playerView;
-        private SlingManager _slingManager;
-        private OptLevelGenerator _optLevelGenerator;
+        [SerializeField]private PlayerView _playerView;
+        [SerializeField] private SlingManager _slingManager;
+        [SerializeField]private OptLevelGenerator _optLevelGenerator;
         private bool _isActive;
 
         [Inject]
-        private void OnInstaller(SlingManager slingManager, PlayerView playerView, OptLevelGenerator optLevelGenerator)
+        private void Execute(SlingManager slingManager)
         {
             _slingManager = slingManager;
-            _playerView = playerView;
-            _optLevelGenerator = optLevelGenerator;
+
         }
 
         private void OnApplicationQuit()

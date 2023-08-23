@@ -5,7 +5,7 @@ using Game.LevelSystem.LevelEvents;
 using Game.LevelSystem.Managers;
 using Game.View;
 using UnityEngine;
-using Zenject;
+using VContainer;
 
 namespace Game.Managers
 {
@@ -16,7 +16,7 @@ namespace Game.Managers
         private CarBase _carBase;
 
         [Inject]
-        private void OnInstaller(PlayerView playerView,LevelManager levelManager, OptLevelGenerator levelGenerator, CarBase carBase)
+        private void Execute(PlayerView playerView,LevelManager levelManager, OptLevelGenerator levelGenerator, CarBase carBase)
         {
             _playerView = playerView;
             _levelGenerator = levelGenerator;

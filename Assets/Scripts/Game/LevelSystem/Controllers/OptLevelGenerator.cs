@@ -8,7 +8,7 @@ using Game.LevelSystem.Managers;
 using Game.Managers;
 using UnityEngine;
 using Utils;
-using Zenject;
+using VContainer;
 using static UnityEngine.UI.GridLayoutGroup;
 
 namespace Game.LevelSystem.Controllers
@@ -39,7 +39,7 @@ namespace Game.LevelSystem.Controllers
             };
 
         [Inject]
-        private void OnInstaller(PoolManager poolManager, LevelManager levelManager, CarBase carBase)
+        private void Execute(PoolManager poolManager, LevelManager levelManager, CarBase carBase)
         {
             _carBase = carBase;
             _poolManager = poolManager;

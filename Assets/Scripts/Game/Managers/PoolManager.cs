@@ -3,7 +3,7 @@ using System.Linq;
 using Game.HighwaySystem.Base;
 using Game.LevelSystem.LevelEvents;
 using UnityEngine;
-using Zenject;
+using VContainer;
 
 namespace Game.Managers
 {
@@ -13,7 +13,7 @@ namespace Game.Managers
         private List<HighwayBase> _highwayBases;
         
         [Inject]
-        private void OnInstaller(AssetManager assetManager)
+        private void Execute(AssetManager assetManager)
         {
             _assetManager = assetManager;
             _highwayBases = GetComponentsInChildren<HighwayBase>(true)?.ToList() ?? new List<HighwayBase>();
